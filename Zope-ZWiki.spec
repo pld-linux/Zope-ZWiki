@@ -11,7 +11,7 @@ Source0:	http://zwiki.org/releases/%{zope_subname}-%{version}.tgz
 # Source0-md5:	a5a6023ce270835a9e30d8aef9264db7
 URL:		http://zwiki.org/FrontPage/
 Requires(post,postun):	/usr/sbin/installzopeproduct
-BuildRequires:  python
+BuildRequires:	python
 %pyrequires_eq	python-modules
 Requires:	Zope
 BuildArch:	noarch
