@@ -1,18 +1,18 @@
 # 
-# WARNING: This version make error connection refused on Zope 2.7.0b3!
+# WARNING: This version crash with Zope 2.7.0b3!
 #
 %include	/usr/lib/rpm/macros.python
 %define 	zope_subname	ZWiki
-%define		sub_ver	rc1
+# %%define		sub_ver	rc1
 Summary:	Zope product which allows you to build wiki webs in Zope
 Summary(pl):	Produkt Zope umo¿liwiaj±cy budowanie stron WWW typu wiki
 Name:		Zope-%{zope_subname}
 Version:	0.26.0
-Release:	0.%{sub_ver}.1
+Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://zwiki.org/releases/%{zope_subname}-%{version}%{sub_ver}.tgz
-# Source0-md5:	f140939d48297eb637775721bb355293
+Source0:	http://zwiki.org/releases/%{zope_subname}-%{version}.tgz
+# Source0-md5:	f561a14861454331d49869b3c8763a5b
 URL:		http://zwiki.org/FrontPage/
 Requires(post,postun):	/usr/sbin/installzopeproduct
 %pyrequires_eq	python-modules
