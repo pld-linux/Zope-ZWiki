@@ -1,6 +1,4 @@
-# 
-# WARNING: This version crash with Zope 2.7.0b3!
-#
+
 %include	/usr/lib/rpm/macros.python
 %define 	zope_subname	ZWiki
 # %%define		sub_ver	rc1
