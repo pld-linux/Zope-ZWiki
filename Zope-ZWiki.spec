@@ -3,7 +3,7 @@
 #
 %include	/usr/lib/rpm/macros.python
 %define 	zope_subname	ZWiki
-Summary:	Zope product allows you to build wiki webs in zope
+Summary:	Zope product which allows you to build wiki webs in Zope
 Summary(pl):	Produkt Zope umo¿liwiaj±cy budowanie stron WWW typu wiki
 Name:		Zope-%{zope_subname}
 %define		sub_ver rc2
@@ -14,17 +14,17 @@ Group:		Development/Tools
 Source0:	http://zwiki.org/releases/%{zope_subname}-%{version}%{sub_ver}.tgz
 # Source0-md5:	a1533c6d82c578a6cb19d9ca91d98dda
 URL:		http://zwiki.org/FrontPage/
+Requires(post,postun):	/usr/sbin/installzopeproduct
 %pyrequires_eq	python-modules
 Requires:	Zope
-Requires(post,postun):	/usr/sbin/installzopeproduct
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Zope product allows you to build wiki webs in zope
+ZWiki is a Zope product which allows you to build wiki webs in Zope.
 
 %description -l pl
-Produkt Zope umo¿liwiaj±cy budowanie stron WWW typu wiki
+ZWiki to produkt Zope umo¿liwiaj±cy budowanie stron WWW typu wiki.
 
 %prep
 %setup -q -n %{zope_subname}
