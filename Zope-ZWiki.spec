@@ -1,5 +1,4 @@
 
-%include	/usr/lib/rpm/macros.python
 %define 	zope_subname	ZWiki
 # %%define		sub_ver	rc1
 Summary:	Zope product which allows you to build wiki webs in Zope
