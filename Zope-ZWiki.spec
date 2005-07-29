@@ -3,12 +3,12 @@
 Summary:	Zope product which allows you to build wiki webs in Zope
 Summary(pl):	Produkt Zope umo¿liwiaj±cy budowanie stron WWW typu wiki
 Name:		Zope-%{zope_subname}
-Version:	0.41.0
+Version:	0.43.0
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://zwiki.org/releases/%{zope_subname}-%{version}.tgz
-# Source0-md5:	a7064dd58bad9bbf5bc1f08cc4f589ca
+# Source0-md5:	442668b86a71df16d8a296a9e232a07c
 URL:		http://zwiki.org/FrontPage/
 Requires(post,postun):	/usr/sbin/installzopeproduct
 BuildRequires:	python
