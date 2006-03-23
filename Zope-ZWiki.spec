@@ -10,10 +10,11 @@ Group:		Development/Tools
 Source0:	http://zwiki.org/releases/%{zope_subname}-%{version}.tgz
 # Source0-md5:	ec7d61cbff03ad304c3d22bdb375df13
 URL:		http://zwiki.org/FrontPage/
-Requires(post,postun):	/usr/sbin/installzopeproduct
 BuildRequires:	python
-%pyrequires_eq	python-modules
+BuildRequires:	rpmbuild(macros) >= 1.268
+Requires(post,postun):	/usr/sbin/installzopeproduct
 Requires:	Zope
+%pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,16 +47,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
 	/usr/sbin/installzopeproduct -d %{zope_subname}
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	%service -q zope restart
 fi
 
 %files
