@@ -1,7 +1,7 @@
 %define 	zope_subname	ZWiki
 # %%define		sub_ver	rc1
 Summary:	Zope product which allows you to build wiki webs in Zope
-Summary(pl.UTF-8):   Produkt Zope umożliwiający budowanie stron WWW typu wiki
+Summary(pl.UTF-8):	Produkt Zope umożliwiający budowanie stron WWW typu wiki
 Name:		Zope-%{zope_subname}
 Version:	0.49.0
 Release:	1
