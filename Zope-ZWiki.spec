@@ -3,12 +3,12 @@
 Summary:	Zope product which allows you to build wiki webs in Zope
 Summary(pl.UTF-8):	Produkt Zope umożliwiający budowanie stron WWW typu wiki
 Name:		Zope-%{zope_subname}
-Version:	0.60.0
+Version:	0.61.0
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://zwiki.org/releases/%{zope_subname}-%{version}.tgz
-# Source0-md5:	64f4e400ac3209fef5c6d17452e99ddc
+# Source0-md5:	74252d6629434e2324505486eee2dfac
 URL:		http://zwiki.org/FrontPage/
 BuildRequires:	python
 BuildRequires:	rpmbuild(macros) >= 1.268
@@ -28,8 +28,6 @@ ZWiki to produkt Zope umożliwiający budowanie stron WWW typu wiki.
 %setup -q -n %{zope_subname}
 
 %build
-mkdir docs
-mv -f {CHANGES,README} docs
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -57,5 +55,4 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc docs/*
 %{_datadir}/%{name}
